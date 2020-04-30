@@ -11,14 +11,11 @@ def create_app(test_config=None):
 
     @app.route('/')
     def get_greeting():
-        excited = os.environ['EXCITED']
-        greeting = "Hello"
-        if excited == 'true': greeting = greeting + "!!!!!"
-        return greeting
+        return "First App on Heroku!"
 
-    @app.route('/coolkids')
+    @app.route('/second')
     def be_cool():
-        return "Be cool, man, be coooool! You're almost a FSND grad!"
+        return "This is the second page on Heroku!"
 
     return app
 
